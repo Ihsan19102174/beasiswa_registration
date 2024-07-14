@@ -10,13 +10,14 @@
 
     <title>Registrasi Beasiswa</title>
     <script>
+        // fungsion untuk memvalidasi email dan nomor hp sesuai dengan format
         function validateForm() {
             var email = document.forms["beasiswaForm"]["email"].value;
             var phone = document.forms["beasiswaForm"]["nomor_hp"].value;
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email)) {
                 alert("Format email tidak valid");
-                return false;
+                return false; 
             }
             if (isNaN(phone)) {
                 alert("Nomor HP harus berupa angka");
@@ -27,7 +28,7 @@
   </head>
   <body>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
             <div class="container" >
                 <a class="navbar-brand" href="#">Beasiswa</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,6 +90,7 @@
         </form>
 
         <script>
+            // untuk mengecek apakah ipk lebih dari 3 atau kurang dari 3 untuk menentukan apakah dapat lanjut mengisi form beasiswa upload berkas dan submit 
             document.getElementById('ipk').addEventListener('input', function () {
                 let ipk = parseFloat(this.value);
                 if (ipk >= 3) {

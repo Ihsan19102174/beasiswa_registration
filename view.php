@@ -104,7 +104,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 	const ctx = document.getElementById('myChart');
- 
+    // membuat pie chart dari data yg sudah di hitung
 	new Chart(ctx, {
 		type: 'pie',
 		data: {
